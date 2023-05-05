@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee admin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <%-include('navbar')%>
+    <div class="container mt-3 p-3"  >
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Email</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Departmant</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <% employees.map((e,index)=>{ %>
+          <tr>
+            <th scope="row"><%=index %></th>
+            <td><%= e.firstname %></td>
+            <td><%= e.lastname %></td>
+            <td><%= e.email %> </td>
+            <td><%= e.salary %></td>
+            <td><%= e.department %></td>
+          </tr>     
+          <%})%>
+        </tbody>
+      </table>  
+    </div>
+</body>
+</html>

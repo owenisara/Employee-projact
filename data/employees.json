@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "64551be1e7b365aa2dbe6839"
+  },
+  "firstname": "Jett",
+  "lastname": "Dash",
+  "email": "jett@gmail.com",
+  "salary": 30000,
+  "department": "Programer",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645525d1c71c5a773591e0de"
+  },
+  "firstname": "Omen",
+  "lastname": "Smoke",
+  "email": "omen@gmail.com",
+  "salary": 25000,
+  "department": "It Support",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64552be4bd5750b22a5da21b"
+  },
+  "firstname": "Woody",
+  "lastname": "Jason",
+  "email": "woody@gmail.com",
+  "salary": 45000,
+  "department": "Programer",
+  "__v": 0
+}]

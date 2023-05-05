@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <title>Employee admin</title>
+</head>
+<body>
+  <%-include('navbar')%>
+  <div class="container mt-3 p-3 "  style="width: 500px" >
+    <form method="post" action="/insert">
+        <div class="mb-3">
+          <label  class="form-label">Firstname</label>
+          <input type="text" class="form-control" name="firstname">
+        
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Lastname</label>
+          <input type="text" class="form-control" name="lastname">
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" >
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Salary</label>
+          <input type="number" class="form-control" name="salary" >
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Department</label>
+          <input type="text" class="form-control" name="department" >
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+  </div>
+</body>
+</html>

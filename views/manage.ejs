@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <script src="js/bootstrap.min.js"></script>
+    <title>Employee admin</title>
+</head>
+<body>
+    <%-include('navbar')%>
+    <div class="container mt-5 "  >
+        <table class="table  table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>Departmant</th>
+                <th>Delete</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% employees.map((e,index)=>{ %>
+              <tr>
+                <th scope="row"><%=index %></th>
+                <td><%= e.firstname %></td>
+                <td><%= e.lastname %></td>
+                <td><%= e.email %> </td>
+                <td><%= e.salary %></td>
+                <td><%= e.department %></td>
+                  <td><a href="/delete/<%= e._id %>"  type="button" class="btn btn-danger"> Delete</a></td>
+                  <td>   
+                     <form method="post" action="/edit">
+                        <input type="hidden" name="edit_id" value="<%= e._id %>">
+                        <button type="submit" class="btn btn-warning" >Edit</button>
+                    </form>
+                   
+                </td>
+                <td>
+                    
+                </td>
+              </tr>     
+              <%})%>
+            </tbody>
+          </table>  
+        </div>
+</body>
+</html>
